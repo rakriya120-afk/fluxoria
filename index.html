@@ -7,134 +7,97 @@
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: Arial, sans-serif;
       color: white;
       text-align: center;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #533483);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
     }
-
-    header {
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #00ffcc;
-      text-shadow: 0 0 10px #00ffcc;
+      font-size: 3rem;
+      color: #ffce00;
+      text-shadow: 0 0 20px #ffce00, 0 0 40px #ff9800;
+      padding: 20px;
     }
+    p { font-size: 1.2rem; }
 
-    header p {
-      margin: 5px 0 0;
-      color: #bbb;
-    }
-
-    .store {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
-      border: 2px solid #00ffcc;
-      border-radius: 15px;
-      padding: 20px;
-      transition: 0.3s;
-      box-shadow: 0 0 15px rgba(0,255,204,0.2);
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 30px;
+      width: 250px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease;
     }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0,255,204,0.6);
-    }
+    .card:hover { transform: scale(1.05); }
 
     .card h2 {
-      margin: 0;
-      font-size: 1.5rem;
-      color: #00ffcc;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #ddd;
-      margin: 10px 0 15px;
-    }
-
-    .price {
-      font-size: 1.2rem;
-      color: gold;
-      font-weight: bold;
-      margin-bottom: 15px;
+      color: #00e0ff;
+      text-shadow: 0 0 10px #00e0ff;
     }
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
-      background: #00ffcc;
-      color: black;
+      padding: 12px 24px;
+      margin-top: 15px;
+      background: linear-gradient(45deg, #ff512f, #dd2476);
+      color: white;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 10px;
-      transition: 0.2s;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #dd2476;
     }
-
     .btn:hover {
-      background: #00ccaa;
+      background: linear-gradient(45deg, #dd2476, #ff512f);
+      box-shadow: 0 0 30px #ff512f, 0 0 50px #dd2476;
     }
 
     footer {
+      margin-top: 50px;
       padding: 20px;
-      margin-top: 40px;
-      font-size: 0.9rem;
       background: rgba(0,0,0,0.6);
-      color: #aaa;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>FluxoriaMC Store</h1>
-    <p>Support the server & get awesome perks!</p>
+    <h1>⚡ FluxoriaMC Store ⚡</h1>
+    <p>Select a category to explore items</p>
   </header>
 
-  <section class="store">
+  <section class="categories">
     <div class="card">
-      <h2>VIP Rank</h2>
-      <p>Exclusive perks, special commands & unique prefix.</p>
-      <div class="price">₹199</div>
-      <a href="#" class="btn">Buy Now</a>
+      <h2>🔑 Keys</h2>
+      <a href="keys.html" target="_blank" class="btn">View Keys</a>
     </div>
-
     <div class="card">
-      <h2>MVP Rank</h2>
-      <p>Everything in VIP + more kits, more homes & early access.</p>
-      <div class="price">₹399</div>
-      <a href="#" class="btn">Buy Now</a>
+      <h2>⭐ Ranks</h2>
+      <a href="ranks.html" target="_blank" class="btn">View Ranks</a>
     </div>
-
     <div class="card">
-      <h2>Legend Rank</h2>
-      <p>The ultimate rank with godly perks & server fame.</p>
-      <div class="price">₹699</div>
-      <a href="#" class="btn">Buy Now</a>
-    </div>
-
-    <div class="card">
-      <h2>Crate Keys</h2>
-      <p>Unlock mystery rewards with epic crate keys.</p>
-      <div class="price">₹99</div>
-      <a href="#" class="btn">Buy Now</a>
+      <h2>🚧 Coming Soon</h2>
+      <a href="#" class="btn">Stay Tuned</a>
     </div>
   </section>
 
   <footer>
-    © 2025 FluxoriaMC • This is a fan-made store layout for GitHub Pages
+    <p>© 2025 FluxoriaMC. All rights reserved.</p>
   </footer>
 </body>
 </html>
